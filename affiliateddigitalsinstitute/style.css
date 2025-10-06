@@ -13,9 +13,10 @@
 
 body {
     background: linear-gradient(135deg, #667eea, #764ba2);
-    min-height: 100vh;
-    padding: 28px 20px;
+    /* min-height: 100vh; */
+    padding: 28px 16px;
     font-family: "Space Grotesk", sans-serif;
+    overflow-x: hidden !important;
 }
 
 .max-w {
@@ -28,6 +29,7 @@ body {
 
 .sitemap-container {
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     background: white;
     border-radius: 12px;
@@ -58,6 +60,7 @@ ul {
 ul.level--1,
 ul.level--2 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -112,5 +115,18 @@ ul.level--3 div {
 
     li > div {
         width: max-content;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .sitemap-container {
+        max-width: none;
+        padding: 40px 20px;
+    }
+    .level--3 { width: 300px; }
+    .page--3 {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal; 
     }
 }
